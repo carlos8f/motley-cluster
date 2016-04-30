@@ -28,7 +28,14 @@ module.exports = function container (get) {
         }
         setImmediate(cb)
       }
-      else listen(cb)
+      else {
+        listen(function (err) {
+          if (err) return cb(err)
+          if (options.setgid) process.setgid(options.setgid)
+          if (options.setuid) process.setuid(options.setuid)
+          setImmediate(cb)
+        })
+      }
     }
   }
 }
