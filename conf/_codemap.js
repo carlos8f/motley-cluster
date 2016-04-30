@@ -2,16 +2,10 @@ module.exports = {
   _ns: 'motley',
   _folder: 'conf',
 
-  'db.redis': {
-    host: 'localhost',
-    port: 6379,
-    db: 0,
-    password: null,
-    key_prefix: 'motley'
-  },
-  'middleware.session{}': {
-    save: {
-      ttl: 86400 * 7 * 2
-    }
+  'site.cluster': {
+    workers: 'auto', // ex: 8
+    respawn: false, // by default, the main process crashes if any of the workers crash. set to true to optimistically respawn workers.
+    setuid: null, // requires root. ex: 'nobody'
+    setgid: null // requires root. ex: 'nogroup'
   }
 }

@@ -1,24 +1,21 @@
 {
-  "name": "motley-redis",
-  "version": "2.0.0",
-  "description": "Redis adapter for Motley",
+  "name": "motley-cluster",
+  "version": "0.0.0",
+  "description": "Cluster (multi-process) adapter for Motley",
   "main": "_codemap",
   "repository": {
     "type": "git",
-    "url": "git://github.com/carlos8f/motley-redis.git"
+    "url": "git://github.com/carlos8f/motley-cluster.git"
   },
   "homepage": "https://s8f.org/motley.html",
   "keywords": [
-    "redis",
+    "cluster",
     "motley"
   ],
   "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carlos8f/motley-redis/issues"
+    "url": "https://github.com/carlos8f/motley-cluster/issues"
   },
-  "dependencies": {
-    "redis": "^2.6.0-1",
-    "sosa_redis": "^0.1.1"
-  }
+  "dependencies": {}
 }
