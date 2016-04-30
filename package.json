@@ -1,6 +1,6 @@
 {
   "name": "motley-cluster",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cluster (multi-process) adapter for Motley",
   "main": "_codemap",
   "repository": {
