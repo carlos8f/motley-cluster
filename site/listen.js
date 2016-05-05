@@ -2,7 +2,7 @@ var cluster = require('cluster')
 
 module.exports = function container (get) {
   return function alter (listen) {
-    return function task (cb) {
+    return function listenClustered (cb) {
       var options = get('conf.site.cluster')
 
       if (cluster.isMaster) {
