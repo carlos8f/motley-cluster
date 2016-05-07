@@ -3,10 +3,10 @@ var cluster = require('cluster')
 module.exports = function container (get, set) {
   return function disconnectCluster (cb) {
     if (cluster.isMaster && get('hooks.listened')) {
-      get('vendor.console').log('motley-cluster: disconnecting cluster...')
+      get('console').log('motley-cluster: disconnecting cluster...')
       cluster.disconnect(function (err) {
         if (err) return cb(err)
-        get('vendor.console').log('motley-cluster: disconnected.')
+        get('console').log('motley-cluster: disconnected.')
         cb()
       })
     }

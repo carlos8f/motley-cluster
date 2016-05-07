@@ -10,7 +10,7 @@ module.exports = function container (get) {
         cluster.on('exit', function (worker, code, signal) {
           var exitCode = worker.process.exitCode
           if (!exitCode) {
-            get('console').error('motley-cluster: worker ' + worker.id + ' exited (' + exitCode + ').')
+            get('console').log('motley-cluster: worker ' + worker.id + ' exited (' + exitCode + ').')
           }
           else if (options.respawn) {
             get('console').error('motley-cluster: worker ' + worker.id + ' crashed (' + exitCode + '). respawning...')

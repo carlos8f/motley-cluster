@@ -3,5 +3,6 @@ module.exports = {
   _folder: 'site',
 
   '@listen': require('./listen'),
+  '@mountMiddleware': require('./mountMiddleware'),
   'disconnectCluster': require('./disconnectCluster')
 }
